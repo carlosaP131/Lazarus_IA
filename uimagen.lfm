@@ -1,0 +1,96 @@
+object FrmImagen: TFrmImagen
+  Left = 1192
+  Height = 577
+  Top = 149
+  Width = 542
+  Caption = 'FrmImagen'
+  ClientHeight = 577
+  ClientWidth = 542
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '3.6.0.0'
+  object ScrollBox1: TScrollBox
+    Left = 0
+    Height = 504
+    Top = 0
+    Width = 440
+    HorzScrollBar.Page = 417
+    VertScrollBar.Page = 480
+    ClientHeight = 502
+    ClientWidth = 438
+    TabOrder = 0
+    object Image1: TImage
+      Left = 0
+      Height = 472
+      Top = 8
+      Width = 417
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 456
+    Top = 440
+    object mnuArchivo: TMenuItem
+      Caption = 'Archivo'
+      object mAABRIR: TMenuItem
+        Caption = 'Abrir'
+        OnClick = mAABRIRClick
+      end
+      object maaAbrirots: TMenuItem
+        Caption = 'Abrir Otras Imagenes'
+        OnClick = maaAbrirotsClick
+      end
+      object mAGuardar: TMenuItem
+        Caption = 'Guardar'
+        OnClick = mAGuardarClick
+      end
+      object mASalir: TMenuItem
+        Caption = 'Salir'
+        OnClick = mASalirClick
+      end
+    end
+    object nmuEditar: TMenuItem
+      Caption = 'Editar'
+    end
+    object nmuVer: TMenuItem
+      Caption = 'Ver'
+      object mnuVImagenCompleta: TMenuItem
+        Caption = 'Imagen Completa'
+        Checked = True
+        OnClick = mnuVImagenCompletaClick
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Op. Puntules'
+      object mnuOpNegativo: TMenuItem
+        Caption = 'Negativo'
+        OnClick = mnuOpNegativoClick
+      end
+      object mnuOpGris1: TMenuItem
+        Caption = 'Gris 1'
+        OnClick = mnuOpGris1Click
+      end
+      object mnuOpgris2: TMenuItem
+        Caption = 'Gris 2'
+        OnClick = mnuOpgris2Click
+      end
+    end
+    object nmuOpRegionales: TMenuItem
+      Caption = 'Op. Regionales'
+    end
+    object nmuHerramientas: TMenuItem
+      Caption = 'Herramientas'
+      object MHHistograma: TMenuItem
+        Caption = 'Histograma'
+        OnClick = MHHistogramaClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 456
+    Top = 384
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 456
+    Top = 336
+  end
+end

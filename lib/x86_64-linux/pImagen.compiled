@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1625802185"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -O1 -gw3 -gl -l -vewnhibq &quot;-Fi/home/labinfo02/Imagen 1 3.0/lib/x86_64-linux&quot; -Fu/usr/share/lazarus/3.6.0/lcl/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/3.6.0/lcl/units/x86_64-linux -Fu/usr/share/lazarus/3.6.0/components/freetype/lib/x86_64-linux -Fu/usr/share/lazarus/3.6.0/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/3.6.0/packager/units/x86_64-linux &quot;-Fu/home/labinfo02/Imagen 1 3.0/&quot; &quot;-FU/home/labinfo02/Imagen 1 3.0/lib/x86_64-linux/&quot; &quot;-FE/home/labinfo02/Imagen 1 3.0/&quot; &quot;-o/home/labinfo02/Imagen 1 3.0/pImagen&quot; -dLCL -dLCLgtk2 pImagen.lpr"/>
+</CONFIG>
