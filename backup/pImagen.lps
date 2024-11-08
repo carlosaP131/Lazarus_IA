@@ -19,8 +19,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uImagen"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="66"/>
-        <CursorPos X="2" Y="80"/>
+        <TopLine Value="171"/>
+        <CursorPos X="53" Y="185"/>
         <UsageCount Value="49"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -93,18 +93,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="85" Column="30" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="74" Column="8" TopLine="59"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="84" Column="8" TopLine="68"/>
-      </Position>
       <Position>
         <Filename Value="uimagen.pas"/>
         <Caret Line="158" Column="15" TopLine="129"/>
@@ -212,6 +200,18 @@
       <Position>
         <Filename Value="uimagen.pas"/>
         <Caret Line="61" Column="26" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="79" Column="42" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="174" Column="3" TopLine="172"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="173" Column="3" TopLine="171"/>
       </Position>
     </JumpHistory>
     <RunParams>
