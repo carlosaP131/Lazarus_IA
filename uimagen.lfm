@@ -1,13 +1,14 @@
 object FrmImagen: TFrmImagen
-  Left = 1192
+  Left = 1263
   Height = 577
-  Top = 149
+  Top = 171
   Width = 542
   Caption = 'FrmImagen'
   ClientHeight = 577
   ClientWidth = 542
   Menu = MainMenu1
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   LCLVersion = '3.6.0.0'
   object ScrollBox1: TScrollBox
     Left = 0
@@ -50,6 +51,10 @@ object FrmImagen: TFrmImagen
     end
     object nmuEditar: TMenuItem
       Caption = 'Editar'
+      object meeDeshacer: TMenuItem
+        Caption = 'Deshacer'
+        OnClick = meeDeshacerClick
+      end
     end
     object nmuVer: TMenuItem
       Caption = 'Ver'

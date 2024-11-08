@@ -14,13 +14,11 @@ type
 
   TFrmImagen = class(TForm)
     Image1: TImage;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
     MainMenu1: TMainMenu;
     mAGuardar: TMenuItem;
     mASalir: TMenuItem;
     maaAbrirots: TMenuItem;
+    meeDeshacer: TMenuItem;
     mnuVImagenCompleta: TMenuItem;
     mnuOpgris2: TMenuItem;
     mnuOpNegativo: TMenuItem;
@@ -43,16 +41,20 @@ type
     procedure mAGuardarClick(Sender: TObject);
     procedure mASalirClick(Sender: TObject);
     procedure maaAbrirotsClick(Sender: TObject);
+    procedure meeDeshacerClick(Sender: TObject);
     procedure MHHistogramaClick(Sender: TObject);
     procedure MImagen(B:TBitmap);
     procedure mnuOpGris1Click(Sender: TObject);
     procedure mnuOpgris2Click(Sender: TObject);
     procedure mnuOpNegativoClick(Sender: TObject);
     procedure mnuVImagenCompletaClick(Sender: TObject);
+    procedure GuardaEstadoImg();
+    procedure RestauraEstadoImg();
   private
 
   public
    Bm: TBitmap;
+    ImageHistory: TList;
    Iancho,Ialto: Integer;
     MTR,MRES: Mat3D;
   end;
@@ -89,6 +91,37 @@ begin
 
 
   end;
+end;
+procedure TFrmImagen.GuardaEstadoImg;
+var
+  Backup: TBitmap;
+begin
+  Backup := TBitmap.Create;
+  Backup.Assign(Image1.Picture.Bitmap);
+
+  if ImageHistory.Count = 2 then
+  begin
+    TBitmap(ImageHistory.First).Free;
+    ImageHistory.Delete(0);
+  end;
+
+  ImageHistory.Add(Backup);
+end;
+procedure TFrmImagen.RestauraEstadoImg;
+var
+  LastImage: TBitmap;
+begin
+  if ImageHistory.Count > 0 then
+  begin
+    LastImage := TBitmap(ImageHistory.Last);
+    Image1.Picture.Bitmap.Assign(LastImage);
+    LastImage.Free;
+    ImageHistory.Delete(ImageHistory.Count - 1);
+  end;
+end;
+procedure TFrmImagen.meeDeshacerClick(Sender: TObject);
+begin
+         RestauraEstadoImg;
 end;
 
 procedure TFrmImagen.MHHistogramaClick(Sender: TObject);
@@ -131,15 +164,13 @@ procedure TFrmImagen.FormCreate(Sender: TObject);
 begin
   Bm := TBitmap.Create;
   BA:=TBitmap.Create;
+   ImageHistory := TList.Create;
 end;
 
-procedure TFrmImagen.Label1Click(Sender: TObject);
-begin
-
-end;
 
 procedure TFrmImagen.MImagen(B:TBitmap);
 begin
+  GuardaEstadoImg;
     Image1.Picture.Assign(B);
 end;
 

@@ -9,7 +9,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="18"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="uimagen.pas"/>
@@ -19,9 +19,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uImagen"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="155"/>
-        <CursorPos X="4" Y="183"/>
-        <UsageCount Value="46"/>
+        <TopLine Value="34"/>
+        <CursorPos X="35" Y="52"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -32,7 +32,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="4"/>
         <CursorPos Y="4"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -43,9 +43,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Uhistograma"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="35"/>
+        <TopLine Value="32"/>
         <CursorPos X="71" Y="17"/>
-        <UsageCount Value="45"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -54,7 +54,7 @@
         <UnitName Value="uPuntuales"/>
         <EditorIndex Value="1"/>
         <CursorPos X="29" Y="45"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -93,66 +93,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="82" Column="54" TopLine="60"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="78" Column="55" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="73" Column="13" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="85" Column="7" TopLine="78"/>
-      </Position>
-      <Position>
-        <Filename Value="upuntuales.pas"/>
-        <Caret Line="15" Column="39" TopLine="9"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="84" Column="5" TopLine="75"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="73" Column="28" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="81" Column="27" TopLine="67"/>
-      </Position>
-      <Position>
-        <Filename Value="upuntuales.pas"/>
-        <Caret Line="33" Column="32" TopLine="27"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="82" Column="16" TopLine="67"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="158" TopLine="142"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="8" Column="67"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="158" Column="13" TopLine="58"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="166" Column="13" TopLine="134"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="85" Column="12" TopLine="65"/>
-      </Position>
       <Position>
         <Filename Value="uimagen.pas"/>
         <Caret Line="86" Column="31" TopLine="66"/>
@@ -212,6 +152,66 @@
       <Position>
         <Filename Value="uimagen.pas"/>
         <Caret Line="86" Column="51" TopLine="85"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="183" Column="4" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="182" Column="4" TopLine="150"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="181" Column="4" TopLine="149"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="180" Column="4" TopLine="148"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="177" Column="46" TopLine="139"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="184" Column="46" TopLine="149"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="193" Column="7" TopLine="158"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="200"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="78" Column="22" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="83" Column="27" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="48" Column="34" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="53" Column="33" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="96" Column="3" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="194" Column="3" TopLine="160"/>
+      </Position>
+      <Position>
+        <Filename Value="uimagen.pas"/>
+        <Caret Line="51" Column="15" TopLine="34"/>
       </Position>
     </JumpHistory>
     <RunParams>
