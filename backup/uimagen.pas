@@ -36,6 +36,7 @@ type
     mnuOpGris1: TMenuItem;
 
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure mAABRIRClick(Sender: TObject);
     procedure mAGuardarClick(Sender: TObject);
@@ -57,6 +58,7 @@ type
     ImageHistory: TList;
    Iancho,Ialto: Integer;
     MTR,MRES: Mat3D;
+     Picture: TPicture;
   end;
 
 var
@@ -75,7 +77,7 @@ end;
 procedure TFrmImagen.maaAbrirotsClick(Sender: TObject);
 var
     nom: String;
-  Picture: TPicture;
+
 begin
   if OpenDialog1.Execute then
   begin
@@ -85,7 +87,6 @@ begin
       Picture.LoadFromFile(nom);  // Carga la imagen en TPicture
       Image1.Picture.Assign(Picture);  // Asigna la imagen cargada a TImage
      Bm:=Picture.Bitmap;
-
      MImagen(Bm);
 
 
@@ -134,13 +135,21 @@ procedure TFrmImagen.mAABRIRClick(Sender: TObject);
 VAR
   nom : String;
 begin
-   if OpenDialog1.Execute then
-   begin
-     nom:=OpenDialog1.FileName;
-     Bm.LoadFromFile(nom);
+  if OpenDialog1.Execute then
+  begin
+    nom := OpenDialog1.FileName;
+    Picture := TPicture.Create;  // Crea una instancia de TPicture
+
+      Picture.LoadFromFile(nom);  // Carga la imagen en TPicture
+      Image1.Picture.Assign(Picture);  // Asigna la imagen cargada a TImage
+     Bm:=Picture.Bitmap;
      MImagen(Bm);
-     Image1.Stretch:=false;
-   end;
+
+    Image1.Stretch:=false;
+
+  end;
+
+
 end;
 
 procedure TFrmImagen.mAGuardarClick(Sender: TObject);
@@ -165,6 +174,22 @@ begin
   Bm := TBitmap.Create;
   BA:=TBitmap.Create;
    ImageHistory := TList.Create;
+end;
+
+procedure TFrmImagen.FormDestroy(Sender: TObject);
+var
+  i: Integer;
+begin
+  for i := 0 to ImageHistory.Count - 1 do
+    TBitmap(ImageHistory[i]).Free;
+  ImageHistory.Free;
+  Bm.Free;
+  BA.Free;
+end;
+
+procedure TFrmImagen.Label1Click(Sender: TObject);
+begin
+
 end;
 
 

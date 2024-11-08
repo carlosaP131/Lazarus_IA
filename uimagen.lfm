@@ -36,10 +36,6 @@ object FrmImagen: TFrmImagen
         Caption = 'Abrir'
         OnClick = mAABRIRClick
       end
-      object maaAbrirots: TMenuItem
-        Caption = 'Abrir Otras Imagenes'
-        OnClick = maaAbrirotsClick
-      end
       object mAGuardar: TMenuItem
         Caption = 'Guardar'
         OnClick = mAGuardarClick

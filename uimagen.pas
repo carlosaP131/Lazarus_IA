@@ -17,7 +17,6 @@ type
     MainMenu1: TMainMenu;
     mAGuardar: TMenuItem;
     mASalir: TMenuItem;
-    maaAbrirots: TMenuItem;
     meeDeshacer: TMenuItem;
     mnuVImagenCompleta: TMenuItem;
     mnuOpgris2: TMenuItem;
@@ -58,6 +57,7 @@ type
     ImageHistory: TList;
    Iancho,Ialto: Integer;
     MTR,MRES: Mat3D;
+     Picture: TPicture;
   end;
 
 var
@@ -76,7 +76,7 @@ end;
 procedure TFrmImagen.maaAbrirotsClick(Sender: TObject);
 var
     nom: String;
-  Picture: TPicture;
+
 begin
   if OpenDialog1.Execute then
   begin
@@ -86,7 +86,6 @@ begin
       Picture.LoadFromFile(nom);  // Carga la imagen en TPicture
       Image1.Picture.Assign(Picture);  // Asigna la imagen cargada a TImage
      Bm:=Picture.Bitmap;
-
      MImagen(Bm);
 
 
@@ -135,13 +134,21 @@ procedure TFrmImagen.mAABRIRClick(Sender: TObject);
 VAR
   nom : String;
 begin
-   if OpenDialog1.Execute then
-   begin
-     nom:=OpenDialog1.FileName;
-     Bm.LoadFromFile(nom);
+  if OpenDialog1.Execute then
+  begin
+    nom := OpenDialog1.FileName;
+    Picture := TPicture.Create;  // Crea una instancia de TPicture
+
+      Picture.LoadFromFile(nom);  // Carga la imagen en TPicture
+      Image1.Picture.Assign(Picture);  // Asigna la imagen cargada a TImage
+     Bm:=Picture.Bitmap;
      MImagen(Bm);
-     Image1.Stretch:=false;
-   end;
+
+    Image1.Stretch:=false;
+
+  end;
+
+
 end;
 
 procedure TFrmImagen.mAGuardarClick(Sender: TObject);
