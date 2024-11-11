@@ -144,7 +144,6 @@ begin
      Bm:=Picture.Bitmap;
      MImagen(Bm);
 
-    Image1.Stretch:=false;
 
   end;
 
@@ -233,8 +232,12 @@ begin
 
   // Cambia el estado de Stretch según el valor de Checked
   Image1.Stretch := mnuVImagenCompleta.Checked;
-       // Cambia el estado de Checked al hacer clic
+  Image1.AutoSize:=not mnuVImagenCompleta.Checked;
+
+  // Cambia el estado de Checked al hacer clic
   mnuVImagenCompleta.Checked := not mnuVImagenCompleta.Checked;
+
+
 
   // Si Stretch es falso, redimensiona el TImage al tamaño original de la imagen
 end;

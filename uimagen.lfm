@@ -1,7 +1,7 @@
 object FrmImagen: TFrmImagen
-  Left = 1263
+  Left = 1283
   Height = 577
-  Top = 171
+  Top = 231
   Width = 542
   Caption = 'FrmImagen'
   ClientHeight = 577
@@ -12,19 +12,19 @@ object FrmImagen: TFrmImagen
   LCLVersion = '3.6.0.0'
   object ScrollBox1: TScrollBox
     Left = 0
-    Height = 504
+    Height = 474
     Top = 0
-    Width = 440
-    HorzScrollBar.Page = 417
-    VertScrollBar.Page = 480
-    ClientHeight = 502
-    ClientWidth = 438
+    Width = 419
+    HorzScrollBar.Page = 408
+    VertScrollBar.Page = 465
+    ClientHeight = 472
+    ClientWidth = 417
     TabOrder = 0
     object Image1: TImage
-      Left = 0
-      Height = 472
-      Top = 8
-      Width = 417
+      Left = -1
+      Height = 465
+      Top = 0
+      Width = 409
     end
   end
   object MainMenu1: TMainMenu
