@@ -18,7 +18,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uImagen"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="74"/>
         <CursorPos Y="57"/>
         <UsageCount Value="53"/>
@@ -29,7 +28,7 @@
         <Filename Value="uvarios.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Uvarios"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="4"/>
         <CursorPos Y="4"/>
         <UsageCount Value="53"/>
@@ -42,7 +41,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Uhistograma"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="32"/>
         <CursorPos X="71" Y="17"/>
         <UsageCount Value="52"/>
@@ -52,7 +51,7 @@
         <Filename Value="upuntuales.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uPuntuales"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="27"/>
         <CursorPos X="34" Y="37"/>
         <UsageCount Value="41"/>
@@ -92,16 +91,21 @@
         <CursorPos X="28" Y="63"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="ufunciongama.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="funciongama"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Ufunciongama"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="9" Y="34"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="83" Column="4" TopLine="71"/>
-      </Position>
-      <Position>
-        <Filename Value="uimagen.pas"/>
-        <Caret Line="88" TopLine="73"/>
-      </Position>
+    <JumpHistory HistoryIndex="27">
       <Position>
         <Filename Value="uimagen.pas"/>
         <Caret Line="82" Column="5" TopLine="76"/>

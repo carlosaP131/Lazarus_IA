@@ -1,0 +1,40 @@
+object funciongama: Tfunciongama
+  Left = 337
+  Height = 444
+  Top = 311
+  Width = 664
+  Caption = 'funcion gama'
+  ClientHeight = 444
+  ClientWidth = 664
+  LCLVersion = '3.6.0.0'
+  object Label1: TLabel
+    Left = 67
+    Height = 17
+    Top = 57
+    Width = 98
+    Caption = 'Valor de Gama'
+  end
+  object lblPosicion: TLabel
+    Left = 176
+    Height = 17
+    Top = 56
+    Width = 20
+    Caption = '1.0'
+  end
+  object Baceptar: TButton
+    Left = 73
+    Height = 25
+    Top = 345
+    Width = 75
+    Caption = 'Aceptar'
+    TabOrder = 0
+  end
+  object Bcancelar: TButton
+    Left = 448
+    Height = 25
+    Top = 345
+    Width = 75
+    Caption = 'Cancelar'
+    TabOrder = 1
+  end
+end
