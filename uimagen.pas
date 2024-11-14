@@ -6,18 +6,22 @@ interface
 
 uses
   Classes, SysUtils,FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Menus,Uvarios,Uhistograma,uPuntuales;
+  Menus,Uvarios,Uhistograma,uPuntuales,Ufunciongama;
 
 type
 
   { TFrmImagen }
 
   TFrmImagen = class(TForm)
+    EUmbral: TEdit;
     Image1: TImage;
+    Label1: TLabel;
     MainMenu1: TMainMenu;
     mAGuardar: TMenuItem;
     mASalir: TMenuItem;
     meeDeshacer: TMenuItem;
+    mnuOpUmbral: TMenuItem;
+    mnuPuntualGamma: TMenuItem;
     mnuVImagenCompleta: TMenuItem;
     mnuOpgris2: TMenuItem;
     mnuOpNegativo: TMenuItem;
@@ -47,6 +51,8 @@ type
     procedure mnuOpGris1Click(Sender: TObject);
     procedure mnuOpgris2Click(Sender: TObject);
     procedure mnuOpNegativoClick(Sender: TObject);
+    procedure mnuOpUmbralClick(Sender: TObject);
+    procedure mnuPuntualGammaClick(Sender: TObject);
     procedure mnuVImagenCompletaClick(Sender: TObject);
     procedure GuardaEstadoImg();
     procedure RestauraEstadoImg();
@@ -225,6 +231,37 @@ begin
    FPNegativo(MTR,MRES,Iancho,Ialto);
    MAT_BM(MRES,Bm,Iancho,Ialto);
    MImagen(Bm);
+end;
+
+procedure TFrmImagen.mnuOpUmbralClick(Sender: TObject);
+var
+  Umbral: Integer;
+begin
+    Umbral:=StrToInt(EUmbral.Text);
+       Iancho:=Bm.Width;
+      Ialto:=Bm.Height;
+      BM_MAT(Bm,MTR);
+     FPGris2(MTR,MRES,Iancho,Ialto);
+    AplicarUmbral(  MRES ,Ialto, Iancho, Umbral);
+    MAT_BM(MRES,Bm,Iancho,Ialto);
+       MImagen(Bm);
+end;
+
+procedure TFrmImagen.mnuPuntualGammaClick(Sender: TObject);
+var
+  gam: real;
+begin
+    frmfunciongama.ShowModal;
+    if frmfunciongama.ModalResult = mrOK then
+    begin
+      gam:= frmfunciongama.g;
+      Iancho:=Bm.Width;
+      Ialto:=Bm.Height;
+      BM_MAT(Bm,MTR);
+      FPGamma(MTR,MRES,Iancho,Ialto,gam);
+      MAT_BM(MRES,Bm,Iancho,Ialto);
+       MImagen(Bm);
+    end;
 end;
 
 procedure TFrmImagen.mnuVImagenCompletaClick(Sender: TObject);

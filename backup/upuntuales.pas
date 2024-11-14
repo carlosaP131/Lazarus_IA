@@ -13,7 +13,13 @@ uses
    procedure FPNegativo(var M1: Mat3D; var M2 : Mat3D; mc,nr:Integer);
    procedure FPGris1(var M1: Mat3D; var M2 : Mat3D; mc,nr:Integer);
    procedure FPGris2(var M1: Mat3D; var M2 : Mat3D; mc,nr:Integer);
+   procedure FPGamma(var M1 : Mat3D; var M2: Mat3D; mc,nr: Integer; g: real);
+   procedure AplicaLut(var M1 :Mat3D; var M2: Mat3D; mc,nr: Integer; T: ArrLam);
+    procedure AplicarUmbral(var M2: Mat3D; mc, nr: Integer; Umbral: Integer);
+
 implementation
+ var
+   tabla : ArrLam;
   procedure FPNegativo(var M1: Mat3D; var M2: Mat3D; mc, nr: Integer);
   var
     i,j,k: Integer;
@@ -34,7 +40,7 @@ implementation
       for j:=0 to nr-1 do
       for i:=0 to mc-1 do
       begin
-       Gris := Round(M1[i][j][0] * 0.299 + M1[i][j][1] * 0.587 + M1[i][j][2] * 0.114);
+       Gris := Round(M1[i][j][0] * 0.299 + M1[i][j][1] *  0.114+ M1[i][j][2] *0.587);
 
       M2[i][j][0] := Gris;
       M2[i][j][1] := Gris;
@@ -57,6 +63,51 @@ implementation
       M2[i][j][2] := Gris;
     end;
      end;
+ procedure FPGamma(var M1: Mat3D; var M2: Mat3D; mc, nr: Integer; g : Real);
+ var
+   k: Integer;
+   begin
+     SetLength(M2,mc,nr,3);
+     for k:=1 to lam do
+     tabla[k]:= Round(lam * Power(k/lam,g));
+     AplicaLut(M1,M2,mc,nr,tabla);
+   end;
+ procedure AplicaLut(var M1: Mat3D; var M2: Mat3D; mc, nr: Integer; T: ArrLam);
+ var
+   i,j,k,z : Integer;
+ begin
+   for j:=0 to nr-1 do
+       for i:= 0 to mc-1 do
+           for k:=0 to 2 do
+           begin
+           z:= M1[i][j][k];
+           M2[i][j][k]:= tabla[z];
+           end;
+ end;
+ procedure AplicarUmbral(var M2: Mat3D; mc, nr: Integer; Umbral: Integer);
+var
+  i, j: Integer;
+begin
+  SetLength(M2, mc, nr, 3);
+  for j := 0 to nr - 1 do
+    for i := 0 to mc - 1 do
+    begin
+      // Aplica el umbral: si el valor es mayor que el umbral, blanco; si no, negro.
+      if M2[i][j][0] > Umbral then
+      begin
+        M2[i][j][0] := 255;
+        M2[i][j][1] := 255;
+        M2[i][j][2] := 255;
+      end
+      else
+      begin
+        M2[i][j][0] := 0;
+        M2[i][j][1] := 0;
+        M2[i][j][2] := 0;
+      end;
+    end;
+end;
+
 
 end.
 

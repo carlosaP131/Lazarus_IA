@@ -21,7 +21,7 @@ begin
   Application.Initialize;
   Application.CreateForm(TFrmImagen, FrmImagen);
   Application.CreateForm(TFrmHistograma, FrmHistograma);
-  Application.CreateForm(Tfunciongama, funciongama);
+  Application.CreateForm(TFrmfunciongama, Frmfunciongama);
   Application.Run;
 end.
 

@@ -59,6 +59,14 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="uPuntuales"/>
       </Unit>
+      <Unit>
+        <Filename Value="ufunciongama.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Frmfunciongama"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Ufunciongama"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

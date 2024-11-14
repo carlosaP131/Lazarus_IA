@@ -1,10 +1,10 @@
 object FrmImagen: TFrmImagen
-  Left = 1283
-  Height = 577
-  Top = 231
+  Left = 587
+  Height = 627
+  Top = 218
   Width = 542
   Caption = 'FrmImagen'
-  ClientHeight = 577
+  ClientHeight = 627
   ClientWidth = 542
   Menu = MainMenu1
   OnCreate = FormCreate
@@ -26,6 +26,20 @@ object FrmImagen: TFrmImagen
       Top = 0
       Width = 409
     end
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 17
+    Top = 528
+    Width = 54
+    Caption = 'Umbral:'
+  end
+  object EUmbral: TEdit
+    Left = 96
+    Height = 34
+    Top = 520
+    Width = 80
+    TabOrder = 1
   end
   object MainMenu1: TMainMenu
     Left = 456
@@ -73,6 +87,14 @@ object FrmImagen: TFrmImagen
       object mnuOpgris2: TMenuItem
         Caption = 'Gris 2'
         OnClick = mnuOpgris2Click
+      end
+      object mnuPuntualGamma: TMenuItem
+        Caption = 'Gamma'
+        OnClick = mnuPuntualGammaClick
+      end
+      object mnuOpUmbral: TMenuItem
+        Caption = 'Umbral'
+        OnClick = mnuOpUmbralClick
       end
     end
     object nmuOpRegionales: TMenuItem
