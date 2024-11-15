@@ -56,7 +56,7 @@ implementation
       for j:=0 to nr-1 do
       for i:=0 to mc-1 do
       begin
-       Gris := Round((M1[i][j][0] + M1[i][j][1]  + M1[i][j][2])div 3);
+       Gris := Round(integer((M1[i][j][0] + M1[i][j][1]  + M1[i][j][2])div 3));
 
       M2[i][j][0] := Gris;
       M2[i][j][1] := Gris;
@@ -85,28 +85,30 @@ implementation
            end;
  end;
  procedure AplicarUmbral(var M2: Mat3D; mc, nr: Integer; Umbral: Integer);
-var
-  i, j: Integer;
-begin
-  SetLength(M2, mc, nr, 3);
-  for j := 0 to nr - 1 do
-    for i := 0 to mc - 1 do
-    begin
-      // Aplica el umbral: si el valor es mayor que el umbral, blanco; si no, negro.
-      if M2[i][j][0] > Umbral then
-      begin
-        M2[i][j][0] := 255;
-        M2[i][j][1] := 255;
-        M2[i][j][2] := 255;
-      end
-      else
-      begin
-        M2[i][j][0] := 0;
-        M2[i][j][1] := 0;
-        M2[i][j][2] := 0;
-      end;
-    end;
-end;
+ var
+   i, j: Integer;
+ begin
+   SetLength(M2, mc, nr, 3);
+
+   for j := 0 to nr - 1 do
+   begin
+     for i := 0 to mc - 1 do
+     begin
+       if (sentido and (M1[i][j][0] > p1)) or ((not sentido) and (M1[i][j][0] <= p1)) then
+         begin
+           M2[i][j][0] := 255;
+           M2[i][j][1] := 255;
+           M2[i][j][2] := 255; // Blanco
+         end
+       else
+         begin
+           M2[i][j][0] := 0;
+           M2[i][j][1] := 0;
+           M2[i][j][2] := 0;  // Negro
+         end;
+     end;
+   end;
+ end;
 
 
 end.

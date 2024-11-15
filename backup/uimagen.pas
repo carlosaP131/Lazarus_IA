@@ -235,16 +235,33 @@ end;
 
 procedure TFrmImagen.mnuOpUmbralClick(Sender: TObject);
 var
-  Umbral: Integer;
+  umbralStr: String;
+  umbral: Integer;
+  sentidoStr: String;
+  sentido: Boolean;
 begin
-    Umbral:=StrToInt(EUmbral.Text);
-       Iancho:=Bm.Width;
-      Ialto:=Bm.Height;
-      BM_MAT(Bm,MTR);
-     FPGris2(MTR,MRES,Iancho,Ialto);
-    AplicarUmbral( MRES, MRES ,Ialto, Iancho, Umbral);
-    MAT_BM(MRES,Bm,Iancho,Ialto);
-       MImagen(Bm);
+  // Solicita el umbral
+  umbralStr := InputBox('Configuración de Umbral', 'Introduzca el umbral (0-255):', '128');
+  if TryStrToInt(umbralStr, umbral) and (umbral >= 0) and (umbral <= 255) then
+  begin
+    // Solicita el sentido
+    sentidoStr := InputBox('Configuración de Sentido', 'Introduzca 1 para invertido, 0 para normal:', '0');
+    sentido := (sentidoStr = '1');
+
+    // Llama al procedimiento con los valores ingresados
+        // Procesa la imagen con los valores recibidos por mensaje
+    Iancho := BM.Width;
+    Ialto := BM.Height;
+    BM_MAT(BM, MTR);
+    FPGris2(MTR, MRES, Iancho, Ialto);
+    FPUmbral(MTR, MRES, Iancho, Ialto, sentido, umbral);
+    MAT_BM(MRES, BM, Iancho, Ialto);
+    MImagen(BM);
+  end
+  else
+  begin
+    ShowMessage('El umbral debe ser un número entre 0 y 255.');
+  end;
 end;
 
 procedure TFrmImagen.mnuPuntualGammaClick(Sender: TObject);
